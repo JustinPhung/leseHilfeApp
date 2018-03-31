@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Leseru Startbildschirm</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding scrollbar-y-hidden>
+  <div class="selectBox vertical-center" (click)="navigateLeseruHome()">
+      <div *ngIf="showStartLeseru"><h4>Leseru starten</h4></div>
+  </div>
+  <hr>
+  <div class="selectBox" (click)="navigateTamagotchi()">
+      <h4>Tamgotchi</h4>
+    <div [ngClass]="getTamagotchiStatus()" class="tamagotchiContainer">
+    </div>
+  </div>
+</ion-content>

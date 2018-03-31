@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Leseru Übung</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content scrollbar-y-hidden padding>
+  <div *ngIf="showResultPic" class="resultContainer" [ngClass]="getResultPic()"></div>
+  <div class="word-area">
+    <div [ngStyle]="setDisplayLocation()" class="randomText">
+      <div [class.blue-circle]="displayBlueCircle">
+        <p>
+          {{displayWord}}
+          </p>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-input type="text" class="word-input"[(ngModel)]="leseruInput">
+  </ion-input>
+      <button ion-button type="submit" class="submitButton" (click)="submitWord()" block>  
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>  
+</ion-footer>
